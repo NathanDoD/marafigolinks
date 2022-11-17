@@ -5,10 +5,12 @@
 body {
     background-color: black;
     font-family: sans-serif;
+    display: f;
 }
 img {
     border-radius: 300px;
     width: 360px;
+    border: 5px solid limegreen;
 }
 h1 {
     color: white;
@@ -25,15 +27,31 @@ li {
     margin-bottom: 18px;
     list-style: none;
 }
-a {
-    background-color: limegreen;
-    color: white;
-    padding: 15px;
-    text-decoration: none;
-    display: block;
-    width: 320px;
-    border-radius: 20px;
+
+.btn:hover {
+    background-color: transparent;
 }
+
+.btn::before {
+    content: '';
+    position: absolute;
+    background-color: limegreen;
+    border-radius: 20px;
+    width: 0;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: .5s ease;
+}
+
+.btn:hover::before {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
 footer {
     color: white;
 }
@@ -43,4 +61,16 @@ footer {
     margin-top: 41px;
     margin-left: auto;
     margin-right: auto;
+}
+
+.btn {
+    background-color: green;
+    color: white;
+    padding: 15px;
+    text-decoration: none;
+    display: block;
+    width: 320px;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
 }
