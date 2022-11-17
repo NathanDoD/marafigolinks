@@ -9,12 +9,13 @@ body {
 }
 img {
     border-radius: 300px;
-    width: 360px;
-    border: 5px solid limegreen;
+    width: 280px;
+    transform: translate(5%);
+    /* border: 5px solid limegreen; */
 }
 h1 {
     color: white;
-    margin-top: 31px;
+    margin-top: 21px;
     margin-bottom: 8px;
     transform: translate(5%);
 }
@@ -23,7 +24,7 @@ p {
     transform: translate(5%);
 }
 ul {
-    margin-top: 35px;
+    margin-top: 21px;
 }
 li {
     margin-bottom: 18px;
@@ -37,7 +38,7 @@ li {
 .btn::before {
     content: '';
     position: absolute;
-    background-color: limegreen;
+    background-color: blue;
     border-radius: 20px;
     width: 0;
     height: 100%;
@@ -66,7 +67,7 @@ footer {
 }
 
 .btn {
-    background-color: green;
+    background-color: navy;
     color: white;
     padding: 15px;
     text-decoration: none;
